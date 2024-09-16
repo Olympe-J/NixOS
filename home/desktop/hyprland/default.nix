@@ -8,6 +8,9 @@
   # For wofi
   home.file.".config/wofi/style.css".source = ./wofi_style.css;
 
-  home.packages = with pkgs; [ wofi ];
+  home.packages = with pkgs; [
+    wofi
+    hyprlock
+  ];
 
 }
