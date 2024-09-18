@@ -9,6 +9,7 @@
 
     discord
     signal-desktop
+    obsidian
 
     keepassxc
     dropbox
