@@ -13,4 +13,6 @@
     hyprlock
   ];
 
+  services.ssh-agent.enable = true;  
+
 }
