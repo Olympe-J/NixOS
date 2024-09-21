@@ -19,7 +19,7 @@
     gnumake
     cmake
     qemu
-    #libgccjit
+    valgrind
     gcc
     binutils
 
