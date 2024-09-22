@@ -15,11 +15,11 @@
     #   signByDefault = true;
     # };
 
-    # aliases = {
-    #   adog = "log --all --decorate --oneline --graph";
-    # };
+    aliases = {
+      logl = "log --all --decorate --oneline --graph";
+    };
   };
 
   services.ssh-agent.enable = true;
-  
+
 }

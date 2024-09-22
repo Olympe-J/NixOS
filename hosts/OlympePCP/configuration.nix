@@ -98,11 +98,15 @@
   users.users.olympe = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
     #   packages = with pkgs; [
     #     firefox
     #     tree
     #   ];
   };
+
+  # zsh needs to be set before changing the default shell
+  programs.zsh.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
