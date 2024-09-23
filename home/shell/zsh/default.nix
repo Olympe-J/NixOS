@@ -2,6 +2,12 @@
 
 {
 
+  home.packages = with pkgs; [
+    zsh-powerlevel10k
+  ];
+
+  home.file.".config/zsh/p10k.zsh".source = ./p10k.zsh;
+
   programs.eza.enable = true;
 
   programs.zsh = {
@@ -39,6 +45,7 @@
       zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
       zstyle ':completion:*' verbose true
       _comp_options+=(globdots)
+      source ~/.config/zsh/p10k.zsh
     '';
 
   };

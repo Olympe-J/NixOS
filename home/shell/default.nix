@@ -3,9 +3,9 @@
 {
 
   imports = [
-    ./kitty
+    ./kitty.nix
     ./programs
-    ./zsh.nix
+    ./zsh
   ];
 
 }
