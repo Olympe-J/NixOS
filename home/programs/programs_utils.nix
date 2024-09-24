@@ -22,6 +22,7 @@
     valgrind
     gcc
     binutils
+    gtest
 
     python3
   ];
