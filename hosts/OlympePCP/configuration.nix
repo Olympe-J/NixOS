@@ -89,21 +89,39 @@
 
   services.blueman.enable = true;
 
-  
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
+
+  # Virtualisation
+  # Docker
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
+  # Virt manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.olympe = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "libvirtd" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     #   packages = with pkgs; [
     #     firefox
     #     tree
     #   ];
   };
+
+  # Swapfile
+  swapDevices = [ {
+    device = "/var/lib/swapfile";
+    size = 8*1024;
+  } ];
 
   # zsh needs to be set before changing the default shell
   programs.zsh.enable = true;

@@ -45,8 +45,10 @@
       zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
       zstyle ':completion:*' verbose true
       _comp_options+=(globdots)
+      
       source ~/.config/zsh/p10k.zsh
 
+      # SSH add keys
       if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
         export SSH_AUTH_SOCK="/run/user/1000/ssh-agent" 
         ssh-add $HOME/.ssh/olympe-git 2> /dev/null
