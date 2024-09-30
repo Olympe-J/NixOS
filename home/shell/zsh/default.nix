@@ -13,6 +13,7 @@
   programs.zsh = {
     enable = true;
     # dotDir = ".config/zsh";
+    defaultKeymap = "emacs";
     autosuggestion.enable = true;
     enableCompletion = true;
     shellAliases = {

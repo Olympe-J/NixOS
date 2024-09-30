@@ -15,6 +15,7 @@
       ms-vscode.makefile-tools
       ms-vscode.cmake-tools
       davidanson.vscode-markdownlint
+      bbenoist.nix
     ];
   };
 

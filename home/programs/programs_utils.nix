@@ -6,6 +6,7 @@
 
     vlc
     gimp
+    filezilla
 
     discord
     signal-desktop
@@ -24,6 +25,9 @@
     binutils
 
     python3
+
+    gnupg
+    
   ];
 
 }
