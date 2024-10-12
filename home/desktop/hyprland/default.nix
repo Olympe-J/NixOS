@@ -15,5 +15,9 @@
 
   # For hyprlock
   home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
+  # Or
+  imports = [
+    # ./hyprlock
+  ];
 
 }

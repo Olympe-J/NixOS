@@ -7,15 +7,22 @@
     vlc
     gimp
     filezilla
+    gparted
 
     discord
     signal-desktop
     obsidian
+    anki
 
     keepassxc
     dropbox
     syncthing
 
+    python3
+
+    gnupg
+
+    # For OS
     gdb
     gnumake
     cmake
@@ -24,10 +31,9 @@
     gcc
     binutils
 
-    python3
-
-    gnupg
-    
+    # For internet
+    tcpdump
+    wireshark
   ];
 
 }

@@ -85,7 +85,7 @@
 
   # Bluetooth
   hardware.bluetooth.enable = true;       # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth.powerOnBoot = false;
 
   services.blueman.enable = true;
 
@@ -109,13 +109,23 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.olympe = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "libvirtd" "wireshark" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     #   packages = with pkgs; [
     #     firefox
     #     tree
     #   ];
   };
+
+  # Wireshark
+  services.udev = {
+    extraRules = ''
+      SUBSYSTEM=="usbmon", GROUP="wireshark", MODE="0640"
+    '';
+  };
+
+  # Support for NTFS
+  boot.supportedFilesystems = [ "ntfs" ];
 
   # Swapfile
   swapDevices = [ {
