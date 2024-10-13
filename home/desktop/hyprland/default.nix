@@ -2,6 +2,10 @@
 
 {
 
+  imports = [
+    ./hyprlock
+  ];
+
   home.packages = with pkgs; [
     wofi
     hyprlock
@@ -12,12 +16,5 @@
 
   # For wofi
   home.file.".config/wofi/style.css".source = ./wofi_style.css;
-
-  # For hyprlock
-  home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
-  # Or
-  imports = [
-    # ./hyprlock
-  ];
 
 }

@@ -16,7 +16,7 @@
         # Hyprlock configuration
         background = {
             monitor = "";
-            path = "/etc/nixos/home/desktop/wallpaper/nixosWallpapers/thumb-1920-1338182.png"   # supports png, jpg, webp (no animations, though)
+            path = "/etc/nixos/home/desktop/wallpaper/nixosWallpapers/thumb-1920-1338182.png";   # supports png, jpg, webp (no animations, though)
             color = "rgba(25, 20, 20, 1.0)";
             # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
             blur_passes = 2; # 0 disables blurring
@@ -36,14 +36,14 @@
                 color = "rgba(255, 255, 255, 0.9)";
                 font_size = 130;
                 font_family = "SF Pro  Display Bold";
-                position = 0, 240;
+                position = "0, 240";
                 halign = "center";
                 valign = "center";
             }
             {
                 monitor = "";
                 text = "Bienvenue, $USER";
-                text_align = center # center/right or any value for default left. multi-line text alignment inside label container
+                text_align = "center"; # center/right or any value for default left. multi-line text alignment inside label container
                 color = "rgba(255, 255, 255, 1.0)";
                 font_size = 25;
                 font_family = "SF Pro Display Bold";
@@ -53,7 +53,7 @@
                 halign = "center";
                 valign = "center";
             }
-        ]
+        ];
 
         image = [
             {
@@ -86,7 +86,7 @@
             }
         ];
 
-        input-field {
+        input-field = {
             monitor = "";
             size = "250, 50";
             outline_thickness = 0;
@@ -115,9 +115,9 @@
             position = "0, -100";
             halign = "center";
             valign = "center";
-        }
+        };
 
-    }
+    };
 
   };
 
