@@ -8,6 +8,7 @@
     gimp
     filezilla
     gparted
+    libreoffice-qt
 
     discord
     signal-desktop
@@ -32,8 +33,8 @@
     binutils
 
     # For internet
-    tcpdump
     wireshark
+
   ];
 
 }

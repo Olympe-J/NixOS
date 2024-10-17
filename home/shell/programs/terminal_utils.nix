@@ -15,6 +15,10 @@
     neofetch
 
     killall
+
+    # For internet 
+    tcpdump
+    
   ];
 
 }
