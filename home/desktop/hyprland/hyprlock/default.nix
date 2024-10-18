@@ -58,7 +58,7 @@
         image = [
             {
                 monitor = "";
-                path = "/etc/nixos/home/desktop/wallpaper/nixosWallpapers/your-name-anime-3840x2160.jpeg";
+                path = "/etc/nixos/home/desktop/hyprland/hyprlockImages/discord_pp.jpeg";
                 size = 150; # lesser side if not 1:1 ratio
                 rounding = -1; # negative values mean circle
                 border_size = 1;
