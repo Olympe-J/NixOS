@@ -130,7 +130,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.olympe = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "wireshark" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "libvirtd" "networkmanager" "wireshark" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     #   packages = with pkgs; [
     #     firefox

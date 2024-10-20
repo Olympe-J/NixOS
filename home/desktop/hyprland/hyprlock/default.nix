@@ -16,7 +16,7 @@
         # Hyprlock configuration
         background = {
             monitor = "";
-            path = "/etc/nixos/home/desktop/wallpaper/nixosWallpapers/thumb-1920-1338182.png";   # supports png, jpg, webp (no animations, though)
+            path = "/home/olympe/.config/waypaper/currentwallpaper";   # supports png, jpg, webp (no animations, though)
             color = "rgba(25, 20, 20, 1.0)";
             # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
             blur_passes = 2; # 0 disables blurring
