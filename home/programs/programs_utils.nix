@@ -7,8 +7,10 @@
     vlc
     gimp
     filezilla
+    tor-browser
     gparted
     libreoffice-qt
+    texlive.combined.scheme-full
 
     discord
     signal-desktop

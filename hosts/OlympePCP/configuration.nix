@@ -151,7 +151,7 @@
   # Swapfile
   swapDevices = [ {
     device = "/var/lib/swapfile";
-    size = 8*1024;
+    size = 16*1024;
   } ];
 
   # zsh needs to be set before changing the default shell
