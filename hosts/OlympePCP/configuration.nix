@@ -104,6 +104,11 @@
     pulse.enable = true;
   };
 
+  # services.avahi {
+  #   enable = true;
+  # }
+  
+
   # Bluetooth
   hardware.bluetooth.enable = true;       # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = false;

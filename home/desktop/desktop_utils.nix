@@ -11,6 +11,7 @@
 
     # Volume
     pavucontrol
+    paprefs
 
     cavalier
 
