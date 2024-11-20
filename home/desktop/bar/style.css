@@ -2,7 +2,7 @@
     border: none;
     font-family: Font Awesome, Roboto, Arial, sans-serif;
     font-size: 13px;
-    color: #ffffff;
+    /*color: #ffffff;*/
     border-radius: 8px;
 }
 
@@ -16,10 +16,12 @@ window#waybar {
 /* ----- module groups ----- */
 .modules-right {
     margin: 2px 5px 0 0;
+    color: #ffffff;
 }
 .modules-center {
 	background-color: rgba(0,0,0,0);
     font-weight:bolder;
+    color: #ffffff;
     text-shadow: rgb(0, 0, 0) 0 0 3px;
 }
 .modules-left {
@@ -34,6 +36,12 @@ window#waybar {
     margin-left: 3px;
 }
 
+#workspaces button.active {
+    border-bottom: 2px solid #ff80ff;
+    color: #ff80ff;
+    padding-top: 1px;
+}
+
 #workspaces button {
 	background-color: rgba(0, 0, 0, 0.4);
     color: #ffffff;
@@ -42,13 +50,8 @@ window#waybar {
     margin-left: 2px;
 }
 
-#workspaces button.active {
-    border-bottom: 2px solid #ffffff;
-    padding-top: 1px;
-}
-
 #workspaces button.urgent {
-    background-color: #ff0000;
+    background-color: #808080;
 }
 
 #workspaces button:hover {
