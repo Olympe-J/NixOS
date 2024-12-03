@@ -26,13 +26,14 @@
     gnupg
 
     # For OS
-    gdb
-    gnumake
-    cmake
-    qemu
-    valgrind
+    
     gcc
-    binutils
+    # gdb
+    # gnumake
+    # cmake
+    # qemu
+    # valgrind
+    # binutils
 
     # For internet
     wireshark

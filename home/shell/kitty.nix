@@ -15,7 +15,7 @@
       placement_strategy = "top-left";
       text_composition_strategy = "legacy";
     };
-    theme = "Ayu";
+    themeFile = "ayu";
   };
 
 }

@@ -4,15 +4,15 @@
 
   inputs = {
 
-    # NixOS official package source, using the nixos-24.05 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    # NixOS official package source, using the nixos-24.11 branch here
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
 
     # Hyprland
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     # Home manager for home-scoped config
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

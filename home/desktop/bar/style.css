@@ -43,7 +43,7 @@ window#waybar {
 }
 
 #workspaces button {
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff;
     border-radius: 8px;
     padding: 0px 5px;
@@ -69,18 +69,18 @@ window#waybar {
 #custom-menu,
 #backlight {
     padding: 0px 10px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #pulseaudio,
 #battery {
     padding: 0px 15px 0px 8px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #custom-power {
-    background-color: rgba(0, 0, 0, 0.4);
     padding: 0px 10px 0px 8px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*-----Indicators----*/
