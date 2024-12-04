@@ -9,6 +9,7 @@
     ./vscode
     ./jetbrains
     ./openvpn
+    ./osint
   ];
 
 }
