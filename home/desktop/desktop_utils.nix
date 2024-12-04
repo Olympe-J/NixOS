@@ -35,7 +35,7 @@
   gtk = {
       enable = true;
       theme = {
-        name = "Tokyonight-Dark-B";
+        name = "Tokyonight-Dark";
         package = pkgs.tokyo-night-gtk;
       };
       iconTheme = {
