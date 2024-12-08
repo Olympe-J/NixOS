@@ -7,13 +7,14 @@ color_thief = ColorThief('/home/olympe/.config/waypaper/currentwallpaper')
 
 dominant_color = color_thief.get_color(quality=100)
 
-moyenne = (dominant_color[0] +  dominant_color[1] +  dominant_color[2]) / 3
+mean = (dominant_color[0] +  dominant_color[1] +  dominant_color[2]) / 3
 
 color_str = ""
 for color in dominant_color:
-    if (color / moyenne < 0.8):
+    value = color / mean
+    if (value < 0.8):
         color_str += "00"
-    elif (color / moyenne < 1.2):
+    elif (value < 1.2):
         color_str += "80"
     else:
         color_str += "FF"
