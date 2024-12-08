@@ -17,4 +17,7 @@
   # For wofi
   home.file.".config/wofi/style.css".source = ./wofi_style.css;
 
+  # For theme command
+  home.file.".config/hypr/theme.py".source = ./theme.py;
+
 }

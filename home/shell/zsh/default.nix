@@ -56,6 +56,10 @@
         ssh-add $HOME/.ssh/olympe-git 2> /dev/null
         ssh-add $HOME/.ssh/gitlab-ensimag 2> /dev/null
       fi
+
+      alias theme='python3 ~/.config/hypr/theme.py'
+
+      alias themewp='python3 ~/.config/waypaper/themewp.py'
     '';
 
   };
