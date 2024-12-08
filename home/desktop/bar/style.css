@@ -37,8 +37,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-    border-bottom: 2px solid #ff80ff;
-    color: #ff80ff;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
     padding-top: 1px;
 }
 

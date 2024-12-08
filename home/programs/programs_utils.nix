@@ -21,8 +21,6 @@
     dropbox
     syncthing
 
-    python3
-
     gnupg
 
     # For OS
@@ -37,6 +35,15 @@
 
     # For internet
     wireshark
+
+
+    # python3
+
+    (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
+      scipy
+      numpy
+      colorthief
+    ]))
 
   ];
 
