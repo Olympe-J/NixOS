@@ -21,6 +21,6 @@ for color in dominant_color:
 
 print('Theme color : #' + color_str)
 
-bashCommand = 'hyprctl keyword general:col.active_border "rgba(' + color_str + 'FF) rgba(000000FF) 90deg"'
+bashCommand = 'hyprctl keyword general:col.active_border "rgba(' + color_str + 'FF) rgba(000000FF) 90deg" > /dev/null'
 
 os.system(bashCommand)
