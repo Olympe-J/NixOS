@@ -22,6 +22,8 @@
       la = "eza --icons -la";
       tree = "eza --tree";
       rg = "source ranger";
+      theme = "python3 ~/.config/hypr/theme.py";
+      themewp = "python3 ~/.config/waypaper/themewp.py";
     };
     history = {
       # path = "${config.home.homeDirectory}/.zshistory";
@@ -56,10 +58,6 @@
         ssh-add $HOME/.ssh/olympe-git 2> /dev/null
         ssh-add $HOME/.ssh/gitlab-ensimag 2> /dev/null
       fi
-
-      # Themes commands
-      alias theme='python3 ~/.config/hypr/theme.py'
-      alias themewp='python3 ~/.config/waypaper/themewp.py'
     '';
 
   };
