@@ -74,7 +74,7 @@ window#waybar {
 
 #pulseaudio,
 #battery {
-    padding: 0px 15px 0px 8px;
+    padding: 0px 8px 0px 8px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
