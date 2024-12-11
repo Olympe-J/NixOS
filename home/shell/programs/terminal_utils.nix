@@ -16,6 +16,9 @@
 
     killall
 
+    # Disk usage
+    gdu
+
     # For internet 
     tcpdump
     
