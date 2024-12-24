@@ -7,6 +7,9 @@
     # Emails
     holehe
 
+    # Exiftool
+    exif 
+
   ];
 
 }

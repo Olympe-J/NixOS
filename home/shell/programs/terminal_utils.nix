@@ -13,6 +13,7 @@
     unzip
 
     neofetch
+    cmatrix
 
     killall
 

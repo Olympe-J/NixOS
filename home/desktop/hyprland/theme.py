@@ -24,7 +24,7 @@ def main(args):
 
             case "help" | "h":
                 print("theme <theme> : set theme, alias: th")
-                print("      <theme> : red|r, red2|r2, orange|o, orange2|o2, yellow|y, green|g, cyan|c, blue|b, purple|p, purple2|p2, pink")
+                print("      <theme> : cyberpunk|cp red|r, red2|r2, orange|o, orange2|o2, yellow|y, green|g, cyan|c, blue|b, purple|p, purple2|p2, pink")
                 print("themewp : set theme based on wallpaper, alias: thwp")
                 return
 
@@ -40,7 +40,26 @@ def main(args):
                 os.system('hyprctl reload > /dev/null')
                 os.system('waypaper --wallpaper ' + defaut_wp + ' > /dev/null')
                 return
-            
+
+            case "cyberpunk" | "cp":
+
+                # Border
+                os.system('hyprctl keyword general:border_size 2 > /dev/null')
+                os.system('hyprctl keyword general:col.active_border 0xFFFFFFFF > /dev/null')
+                os.system('hyprctl keyword general:col.inactive_border 0xFFFFFFFF > /dev/null')
+
+                # Shadow
+                os.system('hyprctl keyword decoration:shadow:range 30 > /dev/null')
+                os.system('hyprctl keyword decoration:shadow:color 0xFFFA0DED > /dev/null')
+                os.system('hyprctl keyword decoration:shadow:color_inactive 0xFF3292F3 > /dev/null')
+
+                # Opacity
+                os.system('hyprctl keyword decoration:inactive_opacity 0.9 > /dev/null')
+                os.system('hyprctl keyword decoration:dim_strength 0.2 > /dev/null')
+                os.system('hyprctl keyword decoration:dim_inactive 1 > /dev/null')
+
+                return
+
             case "red" | "r":
                 new_color = "rgba(FF0000FF) rgba(000000FF) 90deg"
                 new_wallpaper = red1_wp
@@ -81,7 +100,9 @@ def main(args):
 
             case "pink":
                 new_color = "rgba(FF80FFFF) rgba(000000FF) 90deg"
-            
+        
+
+        os.system('hyprctl reload > /dev/null')
 
         if (new_color != ""):
             os.system('hyprctl keyword general:col.active_border "' + new_color + '" > /dev/null')

@@ -36,6 +36,9 @@
     # For internet
     wireshark
 
+    # Docker
+    docker-compose
+
 
     # python3
 
