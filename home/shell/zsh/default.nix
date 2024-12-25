@@ -22,8 +22,8 @@
       la = "eza --icons -la";
       tree = "eza --tree";
       rg = "source ranger";
-      th = "python3 ~/.config/hypr/theme.py";
-      theme = "python3 ~/.config/hypr/theme.py";
+      th = "python3 ~/.config/hypr/themes/scripts/theme.py";
+      theme = "python3 ~/.config/hypr/themes/scripts/theme.py";
       thwp = "python3 ~/.config/waypaper/themewp.py";
       themewp = "python3 ~/.config/waypaper/themewp.py";
     };

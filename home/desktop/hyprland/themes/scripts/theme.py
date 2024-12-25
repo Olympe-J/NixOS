@@ -23,8 +23,9 @@ def main(args):
         match args[1]:
 
             case "help" | "h":
+                print("theme : reset theme, alias: th")
                 print("theme <theme> : set theme, alias: th")
-                print("      <theme> : cyberpunk|cp red|r, red2|r2, orange|o, orange2|o2, yellow|y, green|g, cyan|c, blue|b, purple|p, purple2|p2, pink")
+                print("      <theme> : cyberpunk|cp red|r, red2|r2, orange|o, orange2|o2, yellow|y, green|g, cyan|c, blue|b, purple|p, purple2|p2, pink|pi")
                 print("themewp : set theme based on wallpaper, alias: thwp")
                 return
 
@@ -37,27 +38,11 @@ def main(args):
             case "music" | "m":
                 os.system('hyprctl dispatch -- exec "[workspace 2] NickvisionCavalier.GNOME" > /dev/null')
                 os.system('hyprctl dispatch -- exec "[workspace 1] firefox https://music.youtube.com/" > /dev/null')
-                os.system('hyprctl reload > /dev/null')
-                os.system('waypaper --wallpaper ' + defaut_wp + ' > /dev/null')
                 return
 
             case "cyberpunk" | "cp":
-
-                # Border
-                os.system('hyprctl keyword general:border_size 2 > /dev/null')
-                os.system('hyprctl keyword general:col.active_border 0xFFFFFFFF > /dev/null')
-                os.system('hyprctl keyword general:col.inactive_border 0xFFFFFFFF > /dev/null')
-
-                # Shadow
-                os.system('hyprctl keyword decoration:shadow:range 30 > /dev/null')
-                os.system('hyprctl keyword decoration:shadow:color 0xFFFA0DED > /dev/null')
-                os.system('hyprctl keyword decoration:shadow:color_inactive 0xFF3292F3 > /dev/null')
-
-                # Opacity
-                os.system('hyprctl keyword decoration:inactive_opacity 0.9 > /dev/null')
-                os.system('hyprctl keyword decoration:dim_strength 0.2 > /dev/null')
-                os.system('hyprctl keyword decoration:dim_inactive 1 > /dev/null')
-
+                os.system('ln -fs ~/.config/hypr/themes/confs/cyberpunk_theme.conf ~/.config/hypr/themes/theme')
+                os.system('hyprctl reload > /dev/null')
                 return
 
             case "red" | "r":
@@ -98,10 +83,11 @@ def main(args):
                 new_color = "rgba(FF00FFFF) rgba(000000FF) 90deg"
                 new_wallpaper = defaut_wp
 
-            case "pink":
+            case "pink" | "pi":
                 new_color = "rgba(FF80FFFF) rgba(000000FF) 90deg"
-        
 
+
+        os.system('ln -fs ~/.config/hypr/themes/confs/clean_theme.conf ~/.config/hypr/themes/theme')
         os.system('hyprctl reload > /dev/null')
 
         if (new_color != ""):
@@ -111,15 +97,8 @@ def main(args):
             os.system('waypaper --wallpaper ' + new_wallpaper + ' > /dev/null')
 
 
-        os.system('hyprctl keyword general:border_size 3 > /dev/null')
-
-        os.system('hyprctl keyword decoration:inactive_opacity 0.9 > /dev/null')
-
-        os.system('hyprctl keyword decoration:dim_strength 0.2 > /dev/null')
-        os.system('hyprctl keyword decoration:dim_inactive 1 > /dev/null')
-
-
     else:
+        os.system('ln -fs ~/.config/hypr/themes/confs/main_theme.conf ~/.config/hypr/themes/theme')
         os.system('hyprctl reload > /dev/null')
         os.system('waypaper --wallpaper ' + defaut_wp + ' > /dev/null')
 
