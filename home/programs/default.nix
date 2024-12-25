@@ -8,6 +8,7 @@
     ./firefox
     ./vscode
     ./jetbrains
+    ./obs
     ./openvpn
     ./osint
   ];
