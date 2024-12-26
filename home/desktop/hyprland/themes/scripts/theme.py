@@ -8,7 +8,7 @@ def main(args):
 
     defaut_wp = "~/.config/waypaper/wallpapers/evelynn-kda-3840x2160.jpg"
     red1_wp = "~/.config/waypaper/wallpapers/wallpaper-red1.jpeg"
-    red2_wp = "~/.config/waypaper/wallpapers/wallpaper-red2.jpeg"
+    red2_wp = "~/.config/waypaper/wallpapers/wallpaper-red2.png"
     orange1_wp = "~/.config/waypaper/wallpapers/macos-sequoia-orange.jpg"
     orange2_wp = "~/.config/waypaper/wallpapers/wallpaper-orange2.png"
     yellow1_wp = "~/.config/waypaper/wallpapers/wallpaper-yellow1.png"
