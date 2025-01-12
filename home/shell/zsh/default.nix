@@ -22,6 +22,7 @@
       la = "eza --icons -la";
       tree = "eza --tree";
       rg = "source ranger";
+      rcp = "rsync -ahP --info=progress2";
       th = "python3 ~/.config/hypr/themes/scripts/theme.py";
       theme = "python3 ~/.config/hypr/themes/scripts/theme.py";
       thwp = "python3 ~/.config/waypaper/themewp.py";
