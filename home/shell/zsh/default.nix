@@ -21,7 +21,7 @@
       ll = "eza --icons -l";
       la = "eza --icons -la";
       tree = "eza --tree";
-      rg = "source ranger";
+      sp = "superfile";
       rcp = "rsync -ahP --info=progress2";
       th = "python3 ~/.config/hypr/themes/scripts/theme.py";
       theme = "python3 ~/.config/hypr/themes/scripts/theme.py";

@@ -20,6 +20,9 @@
     # Disk usage
     gdu
 
+    # File explorer
+    superfile
+
     # For internet 
     tcpdump
     
