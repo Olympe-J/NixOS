@@ -6,7 +6,7 @@
 {
 
   home.packages = with pkgs; [
-    rofi
+    rofi-wayland
   ];
 
   # Make a copy of the rofi configs

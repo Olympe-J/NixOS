@@ -1,60 +1,104 @@
+
 * {
-  background-color: #282C33;
-  border-color: #2e343f;
-	border-radius: 10px;
-  text-color: #8ca0aa;
-  spacing: 0;
-  width: 512px;
+
+    bg0:    #212121F2;
+    bg1:    #2A2A2A;
+    bg2:    #3D3D3D80;
+    bg3:    #FFFFFF40;
+    fg0:    #E6E6E6;
+    fg1:    #FFFFFF;
+    fg2:    #969696;
+    fg3:    #3D3D3D;
+
+    font:   "Roboto 15";
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    location:       north;
+    y-offset:       calc(50% - 300px);
+    width:          600;
+    border-radius:  16px;
+
+    background-color:   @bg0;
+}
+
+mainbox {
+    padding:    12px;
 }
 
 inputbar {
-  border: 0 0 1px 0;
-  children: [prompt,entry];
+    background-color:   @bg1;
+    border-color:       @bg3;
+
+    border:         2px;
+    border-radius:  8px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
 }
 
 prompt {
-  padding: 16px;
-  border: 0 1px 0 0;
-}
-
-textbox {
-  background-color: #2e343f;
-  border: 0 0 1px 0;
-  border-color: #282C33;
-  padding: 8px 16px;
+    text-color: @fg2;
 }
 
 entry {
-  padding: 16px;
+    placeholder:        "Search";
+    placeholder-color:  @fg3;
+}
+
+message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    border-color:       @bg2;
+    background-color:   @bg2;
+}
+
+textbox {
+    padding:    16px 24px;
 }
 
 listview {
-  cycle: false;
-  margin: 0 0 -1px 0;
-  scrollbar: false;
-	lines: 8;
+    background-color:   transparent;
+
+    margin:     12px 0 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height: false;
 }
 
 element {
-  border: 0 0 1px 0;
-  padding: 16px;
+    padding:        8px 16px;
+    spacing:        16px;
+    border-radius:  8px;
+}
+
+element normal active {
+    text-color: @bg3;
+}
+
+element alternate active {
+    text-color: @bg3;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg3;
 }
 
 element-icon {
-  size: 26;
-  margin: 0 10 0 0;
-
-  background-color: inherit;
-  text-color:       inherit;
-
-  vertical-align: 0.5;
+    size:           1.5em;
+    vertical-align: 0.5;
 }
 
-element selected {
-  background-color: #2e343f;
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
 }
-
-element-text selected {
-  background-color: #2e343f;
-}
-
