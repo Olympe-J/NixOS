@@ -85,9 +85,11 @@
   nixpkgs.config.allowUnfree = true;
 
   # For battery
-  services.tlp.enable = true;
+  # services.tlp.enable = true;
+  services.power-profiles-daemon.enable = true;
   services.thermald.enable = true;
   powerManagement.enable = true;
+
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

@@ -22,10 +22,10 @@
         // "keyboard-state",
         // "sway/language",
         "pulseaudio",
-        "power-profiles-daemon",
         "backlight",
-        "battery",
         "tray",
+        "battery",
+        "power-profiles-daemon",
         "clock",
         "custom/power"
     ],

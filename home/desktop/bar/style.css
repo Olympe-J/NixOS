@@ -69,18 +69,19 @@ window#waybar {
 #custom-menu,
 #backlight {
     padding: 0px 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 #pulseaudio,
-#battery {
+#battery,
+#power-profiles-daemon {
     padding: 0px 8px 0px 8px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 #custom-power {
     padding: 0px 10px 0px 8px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 /*-----Indicators----*/
