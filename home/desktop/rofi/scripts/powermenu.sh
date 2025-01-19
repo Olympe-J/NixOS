@@ -4,7 +4,7 @@ chosen=$(printf "Lock\nShutdown\nReboot\nExit\n" | rofi -dmenu -i -config ~/.con
 
 case "$chosen" in
     "Lock") hyprlock;;
-    "Shutdown") shutdown -c;;
+    "Shutdown") shutdown now;;
     "Reboot") reboot;;
     "Exit") hyprctl dispatch exit;;
 esac
