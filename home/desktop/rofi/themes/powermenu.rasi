@@ -22,7 +22,7 @@
 
 window {
     location:       center;
-    y-offset:       calc(50% - 300px);
+    y-offset:       calc(50% - 100px);
     width:          600;
     border-radius:  16px;
 
@@ -50,7 +50,7 @@ prompt {
 }
 
 entry {
-    placeholder:        "Search";
+    placeholder:        "Exec";
     placeholder-color:  @fg3;
 }
 

@@ -15,6 +15,12 @@
     recursive = true;
   };
 
+  # Make a copy of the rofi scripts
+  home.file.".config/rofi/scripts" = {
+    source = ./scripts;
+    recursive = true;
+  };
+
   # Make a copy of the rofi themes
   home.file.".config/rofi/themes" = {
     source = ./themes;

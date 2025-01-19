@@ -191,13 +191,16 @@
     "custom/power": {
         "format" : "⏻",
 		"tooltip": false,
+        "on-click": "sh $HOME/.config/rofi/scripts/powermenu.sh"
+        /*
 		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
+		"menu-file": "$HOME/.config/waybar/menu.wml",
+        "menu-actions": {
 			"shutdown": "shutdown",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+        */
     }
 }
