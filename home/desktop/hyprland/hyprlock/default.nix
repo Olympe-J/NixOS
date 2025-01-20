@@ -28,8 +28,8 @@
             vibrancy_darkness = 0.0;
         };
 
-        # Time
         label = [
+            # Time
             {
                 monitor = "";
                 text = "cmd[update:1000] echo \"<span>$(date +\"%H:%M\")</span>\"";
@@ -40,6 +40,7 @@
                 halign = "center";
                 valign = "center";
             }
+            # Bienvenue
             {
                 monitor = "";
                 text = "Bienvenue, $USER";
@@ -52,6 +53,17 @@
                 position = "0, -40";
                 halign = "center";
                 valign = "center";
+            }
+            # Battery
+            {
+                monitor = "";
+                text = "cmd[update:1000] echo -e \"$(~/.config/hypr/scripts/battery.sh)\"";
+                color = "rgba(255, 255, 255, 1.0)";
+                font_size = 16;
+                font_family = "SF Pro  Display Bold";
+                position = "0, 10";
+                halign = "center";
+                valign = "bottom";
             }
         ];
 

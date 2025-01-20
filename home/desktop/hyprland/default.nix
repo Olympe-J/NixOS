@@ -19,4 +19,10 @@
     recursive = true;
   };
 
+  # For scripts
+  home.file.".config/hypr/scripts" = {
+    source = ./scripts;
+    recursive = true;
+  };
+
 }
