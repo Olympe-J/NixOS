@@ -26,6 +26,9 @@ window {
     width:          600;
     border-radius:  16px;
 
+    border: 1px;
+    border-color: @fg3;
+
     background-color:   @bg0;
 }
 

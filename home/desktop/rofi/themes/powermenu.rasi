@@ -1,4 +1,8 @@
 
+configuration {
+    show-icons:                 false;
+}
+
 * {
 
     bg0:    #212121F2;
@@ -10,7 +14,7 @@
     fg2:    #969696;
     fg3:    #3D3D3D;
 
-    font:   "Roboto 15";
+    font:   "Roboto 16";
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -25,6 +29,9 @@ window {
     y-offset:       calc(50% - 100px);
     width:          600;
     border-radius:  16px;
+
+    border: 1px;
+    border-color: @fg3;
 
     background-color:   @bg0;
 }
@@ -69,14 +76,14 @@ listview {
     background-color:   transparent;
 
     margin:     12px 0 0;
-    lines:      8;
-    columns:    1;
+    lines:      1;
+    columns:    4;
 
     fixed-height: false;
 }
 
 element {
-    padding:        8px 16px;
+    padding:        12px 16px;
     spacing:        16px;
     border-radius:  8px;
 }
@@ -93,12 +100,8 @@ element selected normal, element selected active {
     background-color:   @bg3;
 }
 
-element-icon {
-    size:           1.5em;
-    vertical-align: 0.5;
-}
-
 element-text {
     text-color: inherit;
     vertical-align: 0.5;
+    horizontal-align: 0.5;
 }
