@@ -20,7 +20,9 @@ def main(args):
         new_wallpaper = ""
         new_color = ""
 
-        match args[1]:
+        arg1_lowercase = args[1].lower()
+
+        match arg1_lowercase:
 
             case "help" | "h":
                 print("theme : reset theme, alias: th")
@@ -43,6 +45,12 @@ def main(args):
             case "cyberpunk" | "cp":
                 os.system('ln -fs ~/.config/hypr/themes/confs/cyberpunk_theme.conf ~/.config/hypr/themes/theme')
                 os.system('hyprctl reload > /dev/null')
+                return
+
+            case "default" | "d":
+                os.system('ln -fs ~/.config/hypr/themes/confs/main_theme.conf ~/.config/hypr/themes/theme')
+                os.system('hyprctl reload > /dev/null')
+                os.system('waypaper --wallpaper ' + defaut_wp + ' > /dev/null')
                 return
 
             case "red" | "r":
@@ -87,10 +95,9 @@ def main(args):
                 new_color = "rgba(FF80FFFF) rgba(000000FF) 90deg"
 
 
-        os.system('ln -fs ~/.config/hypr/themes/confs/clean_theme.conf ~/.config/hypr/themes/theme')
-        os.system('hyprctl reload > /dev/null')
-
         if (new_color != ""):
+            os.system('ln -fs ~/.config/hypr/themes/confs/clean_theme.conf ~/.config/hypr/themes/theme')
+            os.system('hyprctl reload > /dev/null')
             os.system('hyprctl keyword general:col.active_border "' + new_color + '" > /dev/null')
 
         if (new_wallpaper != ""):
