@@ -14,6 +14,11 @@ Cyan
 Blue
 Purple
 Purple2
-Pink" | rofi -dmenu -i -config ~/.config/rofi/configs/thememenu.conf)
+Pink
+Wallpaper" | rofi -dmenu -i -config ~/.config/rofi/configs/thememenu.conf)
 
-python3 ~/.config/hypr/themes/scripts/theme.py "$chosen"
+if [[ "$chosen" == "Wallpaper" ]]; then
+    python3 ~/.config/waypaper/themewp.py
+else
+    python3 ~/.config/hypr/themes/scripts/theme.py "$chosen"
+fi
