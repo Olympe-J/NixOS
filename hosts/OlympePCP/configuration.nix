@@ -109,6 +109,9 @@
   # services.avahi {
   #   enable = true;
   # }
+
+  # Enable playerctl service for audio control
+  services.playerctld.enable = true;
   
 
   # Bluetooth
