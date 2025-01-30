@@ -45,6 +45,7 @@
       scipy
       numpy
       colorthief
+      mkdocs
     ]))
 
   ];

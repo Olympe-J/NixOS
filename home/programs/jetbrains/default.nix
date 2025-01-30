@@ -7,6 +7,7 @@
     jetbrains.pycharm-professional
     jetbrains.clion
     jetbrains.rider
+    jetbrains.webstorm
   ];
 
 }
