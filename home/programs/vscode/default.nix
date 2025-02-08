@@ -14,6 +14,7 @@
       ms-vscode.cpptools-extension-pack
       ms-vscode.makefile-tools
       ms-vscode.cmake-tools
+      ms-vscode.live-server
       davidanson.vscode-markdownlint
       bbenoist.nix
       james-yu.latex-workshop

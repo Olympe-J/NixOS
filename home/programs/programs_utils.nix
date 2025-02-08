@@ -46,6 +46,7 @@
       numpy
       colorthief
       mkdocs
+      htmlhint
     ]))
 
   ];
