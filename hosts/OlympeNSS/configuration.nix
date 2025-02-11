@@ -16,11 +16,31 @@
     ../../modules/system.nix
   ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "/dev/sda";
+      useOSProber = false;
+    };
+  };
 
-  networking.hostName = "OlympeNSS"; # Define your hostname.
+  networking = {
+    hostName = "OlympeNSS";
+    interfaces = {
+      ens18.ipv4 = {
+        addresses = [{
+          address = "93.127.158.67";
+          prefixLength = 24;
+        }];
+      };
+    };
+    defaultGateway = {
+      address = "93.127.158.1";
+      interface = "ens18";
+    };
+    nameservers = [ "1.1.1.1" "1.0.0.1" ];
+  };
+
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
