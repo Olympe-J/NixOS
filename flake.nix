@@ -42,6 +42,8 @@
     }
     @inputs:
     {
+
+      # Olympe PC Portable
       nixosConfigurations.OlympePCP = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
@@ -78,6 +80,45 @@
 
         ];
       };
+
+      # Olympe Nix Storage Server
+      nixosConfigurations.OlympeNSS = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        specialArgs = {
+          inherit inputs;
+        }; # this is the important part for Hyprland
+        
+        modules = [
+          # Import the previous configuration.nix we used,
+          # so the old configuration file still takes effect
+          ./hosts/OlympeNSS/configuration.nix
+
+          # Load Home Manager
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
+
+            home-manager.users.olympe = import hosts/OlympeNSS/olympeNSS_home.nix;
+          }
+
+          # VScode server 
+          vscode-server.nixosModules.default
+          (
+            { config, pkgs, ... }:
+            {
+              services.vscode-server.enable = true;
+            }
+          )
+
+        ];
+      };
+
 
       # Nix fmt
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;

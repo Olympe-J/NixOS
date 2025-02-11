@@ -13,7 +13,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../../modules/hyprland.nix
     ../../modules/system.nix
   ];
 
@@ -21,10 +20,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "OlympePCP"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.hostName = "OlympeNSS"; # Define your hostname.
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -41,15 +37,12 @@
     # useXkbConfig = true; # use xkb.options in tty.
   };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
-  
+
   environment.systemPackages = with pkgs; [
     # Flakes clones its dependencies through the git command,
     # so git must be installed first
@@ -60,70 +53,15 @@
   ];
 
 
-  # ===== JAVA =====
-  programs.java.enable = true; 
-
-
-  # ===== Steam =====
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-    
-    # package = pkgs.steam.override {
-    #   withPrimus = true;
-    #   extraPkgs = pkgs: [ bumblebee glxinfo ];
-    #   withJava = true;
-    # };
-  };
-
-
   # Set the default editor to vim
   environment.variables.EDITOR = "vim";
 
   # Allow unfree pkgs
   nixpkgs.config.allowUnfree = true;
 
-  # For battery
-  # services.tlp.enable = true;
-  services.power-profiles-daemon.enable = true;
-  services.thermald.enable = true;
-  powerManagement.enable = true;
-
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-  # services.avahi {
-  #   enable = true;
-  # }
-
-  # Enable playerctl service for audio control
-  services.playerctld.enable = true;
-  
-
-  # Bluetooth
-  hardware.bluetooth.enable = true;       # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = false;
-
-  services.blueman.enable = true;
-
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
 
 
   # Virtualisation
@@ -133,15 +71,11 @@
     setSocketVariable = true;
   };
 
-  # Virt manager
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.olympe = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "networkmanager" "wireshark" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     #   packages = with pkgs; [
     #     firefox
@@ -149,39 +83,14 @@
     #   ];
   };
 
-  # Wireshark
-  services.udev = {
-    extraRules = ''
-      SUBSYSTEM=="usbmon", GROUP="wireshark", MODE="0640"
-    '';
-  };
-
-  # Support for NTFS
-  boot.supportedFilesystems = [ "ntfs" ];
-
   # Swapfile
   swapDevices = [ {
     device = "/var/lib/swapfile";
-    size = 16*1024;
+    size = 8*1024;
   } ];
 
   # zsh needs to be set before changing the default shell
   programs.zsh.enable = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  # environment.systemPackages = with pkgs; [
-  #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #   wget
-  # ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 
