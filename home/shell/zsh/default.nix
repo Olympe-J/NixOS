@@ -27,6 +27,7 @@
       theme = "python3 ~/.config/hypr/themes/scripts/theme.py";
       thwp = "python3 ~/.config/waypaper/themewp.py";
       themewp = "python3 ~/.config/waypaper/themewp.py";
+      ssh = "kitty +kitten ssh";
     };
     history = {
       # path = "${config.home.homeDirectory}/.zshistory";
