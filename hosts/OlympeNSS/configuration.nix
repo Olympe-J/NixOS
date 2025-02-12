@@ -97,6 +97,11 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEQahwsEM0QGbiKmrvmBv3Y3JQ98E96LAY5DiSdOCoWd olympe@OlympePCP" # content of authorized_keys file
+      # note: ssh-copy-id will add user@your-machine after the public key
+      # but we can remove the "@your-machine" part
+    ];
     #   packages = with pkgs; [
     #     firefox
     #     tree
@@ -118,7 +123,7 @@
   # services.openssh.enable = true;
   services.openssh = {
     enable = true;
-    ports = [ 22 ];
+    ports = [ 24754 ];
     settings = {
       PasswordAuthentication = true;
       AllowUsers = [ "olympe" ];
