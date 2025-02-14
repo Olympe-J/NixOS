@@ -9,6 +9,7 @@
 
   imports = [
     ../../home/programs/git.nix
+    ../../home/programs/torrents
     ../../home/shell/programs
     ../../home/shell/vim
     ../../home/shell/zsh
