@@ -165,6 +165,9 @@
     size = 16*1024;
   } ];
 
+  # Teamviewer
+  # services.teamviewer.enable = true;
+
   # zsh needs to be set before changing the default shell
   programs.zsh.enable = true;
 
