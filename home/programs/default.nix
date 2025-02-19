@@ -3,14 +3,15 @@
 {
 
   imports = [
-    ./programs_utils.nix
     ./git.nix
+    ./programs_utils.nix
     ./firefox
-    ./vscode
     ./jetbrains
     ./obs
     ./openvpn
     ./osint
+    ./rustdesk
+    ./vscode
   ];
 
 }
