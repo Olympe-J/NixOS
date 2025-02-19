@@ -28,9 +28,17 @@ in {
 
     nginx = {
       enable = true;
-      virtualHosts."127.0.0.1" = {
-        enableACME = false;
-        addSSL = false;
+      virtualHosts = let SSL = {
+        enableACME = true;
+        forceSSL = true;
+      }; in {
+        "127.0.0.1" = {
+          enableACME = false;
+          addSSL = false;
+        };
+        "93.127.158.67:8080" = ({
+          locations."/".proxyPass = "http://127.0.0.1:80/";
+        });
       };
     };
 
