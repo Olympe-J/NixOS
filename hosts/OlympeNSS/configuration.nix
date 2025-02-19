@@ -15,7 +15,7 @@
     ./hardware-configuration.nix
     ../../modules/system.nix
     ../../modules/rustdesk
-    ../../modules/rtorrent
+    ../../modules/torrents
   ];
 
   boot.loader = {
