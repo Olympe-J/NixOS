@@ -14,7 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/system.nix
-    ../../modules/rustdesk
+    # ../../modules/rustdesk
     ../../modules/torrents
   ];
 
