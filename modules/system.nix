@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 
@@ -35,6 +36,19 @@
       emoji = [ ];
     };
   };
+
+
+  boot.plymouth.enable = false;
+
+  appstream.enable = false;
+  services.lvm.enable = false;
+
+  programs.command-not-found.enable = false;
+  # programs.nano.enable = false;
+
+  services.nscd.enable = false;
+  system.nssModules = lib.mkForce [];
+
 
   # Auto-cleaning
   # nix.gc = {
