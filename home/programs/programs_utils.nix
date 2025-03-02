@@ -8,7 +8,6 @@
     gimp
     filezilla
     tor-browser
-    gparted
     libreoffice-qt
     texlive.combined.scheme-full
 
