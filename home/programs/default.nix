@@ -6,6 +6,7 @@
     ./git.nix
     ./programs_utils.nix
     ./firefox
+    ./gparted
     ./jetbrains
     ./obs
     ./openvpn
