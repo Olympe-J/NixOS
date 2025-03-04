@@ -57,6 +57,8 @@
     vim
     wget
     curl
+    # Keyboard 3W6
+    vial
   ];
 
 
@@ -122,6 +124,10 @@
   services.blueman.enable = true;
 
 
+  # Keyboard 3W6
+  hardware.keyboard.qmk.enable = true;
+
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
@@ -149,11 +155,14 @@
     #   ];
   };
 
-  # Wireshark
   services.udev = {
+    # Wireshark
     extraRules = ''
       SUBSYSTEM=="usbmon", GROUP="wireshark", MODE="0640"
     '';
+
+    # Via
+    packages = [ pkgs.vial ];
   };
 
   # Support for NTFS
