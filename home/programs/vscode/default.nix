@@ -16,7 +16,7 @@
       ms-vscode.cmake-tools
       ms-vscode.live-server
       davidanson.vscode-markdownlint
-      bbenoist.nix
+      jnoortheen.nix-ide
       james-yu.latex-workshop
     ];
   };
