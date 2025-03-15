@@ -41,11 +41,16 @@
     # python3
 
     (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
+
       scipy
       numpy
       colorthief
-      mkdocs
+
+      # mkdocs
+      # mkdocs-material
+
       htmlhint
+      
     ]))
 
   ];
