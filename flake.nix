@@ -16,6 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Nix-LD
+    nix-ld.url = "github:Mic92/nix-ld";
+    # this line assume that you also have nixpkgs as an input
+    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
+
     # VScode server
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
@@ -35,6 +40,7 @@
       nixpkgs,
       hyprland,
       home-manager,
+      nix-ld,
       vscode-server,
       swww,
       # ags,
