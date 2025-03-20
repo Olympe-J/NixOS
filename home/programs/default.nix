@@ -6,6 +6,7 @@
     ./git.nix
     ./programs_utils.nix
     ./firefox
+    ./gaming
     ./gparted
     ./jetbrains
     ./obs
