@@ -8,6 +8,7 @@
     ./firefox
     ./gaming
     ./gparted
+    ./java
     ./jetbrains
     ./obs
     ./openvpn

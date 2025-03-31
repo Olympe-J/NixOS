@@ -38,6 +38,12 @@
     # Docker
     docker-compose
 
+    # Make windows usb key
+    woeusb-ng
+
+    # Repair XFS device
+    xfsprogs
+
     # python3
 
     (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
