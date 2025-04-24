@@ -20,6 +20,12 @@
     dropbox
     syncthing
 
+    # 3D printing
+    orca-slicer
+
+    # Chiffrement
+    veracrypt
+
     gnupg
 
     # For OS
