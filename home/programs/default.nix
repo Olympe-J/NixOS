@@ -5,6 +5,7 @@
   imports = [
     ./git.nix
     ./programs_utils.nix
+    ./development
     ./firefox
     ./gaming
     ./gparted

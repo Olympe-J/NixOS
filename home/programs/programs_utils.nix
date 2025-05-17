@@ -26,11 +26,7 @@
     # Chiffrement
     veracrypt
 
-    gnupg
-
     # For OS
-    
-    gcc
     # gdb
     # gnumake
     # cmake
@@ -49,21 +45,6 @@
 
     # Repair XFS device
     xfsprogs
-
-    # python3
-
-    (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
-
-      scipy
-      numpy
-      colorthief
-
-      # mkdocs
-      # mkdocs-material
-
-      htmlhint
-      
-    ]))
 
   ];
 

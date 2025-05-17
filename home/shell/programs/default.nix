@@ -2,6 +2,11 @@
 
 {
 
-  imports = [ ./terminal_utils.nix ];
+  imports = [
+    
+    ./terminal_utils.nix
+    ./node.nix
+  
+  ];
 
 }
