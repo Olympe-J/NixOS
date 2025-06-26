@@ -46,6 +46,9 @@
     # Repair XFS device
     xfsprogs
 
+    # Raspberry PI
+    rpi-imager
+
   ];
 
 }

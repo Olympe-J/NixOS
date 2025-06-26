@@ -42,7 +42,7 @@
       searchDownKey = [ "^[OB" ];
     };
 
-    initExtra = ''
+    initContent = ''
       # case insensitive tab completion in a menu
       zstyle ':completion:*' completer _complete _ignored _approximate
       zstyle ':completion:*' list-colors
