@@ -12,7 +12,9 @@
     zip
     unzip
 
-    neofetch
+    fastfetch
+    hyfetch
+
     cmatrix
 
     killall
