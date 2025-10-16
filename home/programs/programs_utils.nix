@@ -49,6 +49,9 @@
     # Raspberry PI
     rpi-imager
 
+    # Video
+    ffmpeg
+
   ];
 
 }
