@@ -45,6 +45,7 @@ def main(args):
             case "cyberpunk" | "cp":
                 os.system('ln -fs ~/.config/hypr/themes/confs/cyberpunk_theme.conf ~/.config/hypr/themes/theme')
                 os.system('hyprctl reload > /dev/null')
+                os.system('waypaper --wallpaper ' + defaut_wp + ' > /dev/null')
                 return
 
             case "default" | "d":
