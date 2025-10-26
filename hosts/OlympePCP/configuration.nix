@@ -59,6 +59,7 @@
     curl
     # Keyboard 3W6
     vial
+    gparted
   ];
 
 

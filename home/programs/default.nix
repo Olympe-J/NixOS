@@ -8,7 +8,6 @@
     ./development
     ./firefox
     ./gaming
-    ./gparted
     ./java
     ./jetbrains
     ./obs
